@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網站名稱 - 我最愛的影片</title>
+    <style>
+        /* CSS 樣式請與 index.html 保持一致，以維持網站外觀統一 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333; /* 確保與其他頁面一致 */
+            color: white;           
+            padding: 20px 0;        
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        /* 讓影片居中顯示 */
+        .video-wrapper {
+            margin: 30px auto;
+            max-width: 700px;
+        }
+        .video-wrapper iframe {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9; /* 維持 16:9 的影片比例 */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>我最愛的影片</h1>
+        <p>在這裡分享我珍藏的 YouTube 連結！</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="team.html">團隊介紹</a></li>
+            <li><a href="bus_ratings.html">公車評價圖</a></li>
+            <li><a href="files.html">檔案交換區</a></li>
+            <li><a href="favorite_videos.html">我最愛的影片</a></li> 
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>我的精選影片</h2>
+        
+        <div class="video-wrapper">
+            <h3>影片標題 A</h3>
+            <iframe width="100%" height="auto" 
+<iframe width="1296" height="729" src="https://www.youtube.com/embed/yWirdnSDsV4" title="The Wheels On The Bus featuring Noodle &amp; Pals | Super Simple Songs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+            <p>這段影片介紹了...</p>
+        </div>
+
+        <div class="video-wrapper">
+            <h3>影片標題 B (如果有多個)</h3>
+            </div>
+
+    </div>
+
+</body>
+</html>
