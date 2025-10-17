@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網站名稱 - 公車評價統計圖</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        /* 確保樣式與其他頁面一致 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333; 
+            color: white;           
+            padding: 20px 0;        
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        #chartWrapper {
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>公車評價統計圖</h1>
+        <p>最新的乘客滿意度調查結果。</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="team.html">團隊介紹</a></li>
+            <li><a href="bus_ratings.html">公車評價圖</a></li>
+            <li><a href="share.html">檔案交換區</a></li>
+            <li><a href="favorite_videos.html">我最愛的影片</a></li>
+            < 
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>公車服務滿意度調查 (2025 年 10 月)</h2>
+        
+        <div id="chartWrapper">
+            <canvas id="busRatingChart" style="max-height: 400px;"></canvas>
+        </div>
+        
+    </div>
+
+    <script>
+        // 圖表的資料和配置
+        const chartData = {
+            labels: ['極差 (1星)', '不滿意 (2星)', '普通 (3星)', '滿意 (4星)', '極佳 (5星)'],
+            datasets: [{
+                label: '投票人數',
+                data: [5, 15, 40, 65, 80], // 您的統計數據
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.7)',
+                    'rgba(255, 159, 64, 0.7)',
+                    'rgba(255, 205, 86, 0.7)',
+                    'rgba(75, 192, 192, 0.7)',
+                    'rgba(54, 162, 235, 0.7)'
+                ],
+                borderColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 159, 64)',
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(54, 162, 235)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // 繪製圖表
+        const ctx = document.getElementById('busRatingChart').getContext('2d');
+        const busRatingChart = new Chart(ctx, {
+            type: 'bar', // 長條圖
+            data: chartData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
