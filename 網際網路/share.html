@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網站名稱 - 資源連結共享區</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        /* CSS 樣式請與其他頁面保持一致 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333; 
+            color: white;           
+            padding: 20px 0;        
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .link-list {
+            list-style-type: decimal; /* 使用數字列表 */
+            padding-left: 40px;
+        }
+        .link-list li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 5px;
+        }
+        /* 讓連結在新分頁打開，避免離開您的網站 */
+        .link-list a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .link-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>資源連結共享區</h1>
+        <p>所有成員常用的外部連結、參考資料及工具網站。</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="team.html">團隊介紹</a></li>
+            <li><a href="bus_ratings.html">公車評價圖</a></li>
+            <li><a href="share.html">檔案交換區</a></li>
+            <li><a href="favorite_videos.html">我最愛的影片</a></li> 
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>外部重要連結</h2>
+        
+        <ol class="link-list">
+            <li>
+                <a href="https://www.google.com" target="_blank">Google 搜尋引擎</a> 
+                - 遇到問題時的首選查詢工具。
+            </li>
+            <li>
+                <a href="https://example.com/project-docs" target="_blank">專案文件庫</a> 
+                - 儲存所有專案說明文件和備忘錄。
+            </li>
+            <li>
+                <a href="https://github.com/your-team-repo" target="_blank">我們的 GitHub 儲存庫</a> 
+                - 程式碼版本控制與協作中心。
+            </li>
+            <li>
+                <a href="https://www.w3schools.com/html/" target="_blank">HTML 教學網站</a> 
+                - 學習網頁基礎知識的絕佳資源。
+            </li>
+
+            </ol>
+        
+        <p style="margin-top: 40px; font-style: italic;">
+            **如何新增連結？**<br>
+            由於這是靜態網站，目前您需要手動編輯 `resources.html` 檔案，在 `<ol>` 列表中加入新的 `<li>` 標籤，然後重新提交到 GitHub 才能更新連結。
+        </p>
+
+    </div>
+</body>
+</html>
